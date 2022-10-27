@@ -7,4 +7,10 @@
     --border_login: #D7D7D7;
     --text_login:#D7D7D7;
     --login_button: #696969;
+    --chat_background_color:#E5E5E5;
+    --text_hour_color:#AAAAAA;
+    --from_text_color:#000000;  
+    --message_enter_room:#DCDCDC;
+    --message_private:#FFDEDE;
+    --message_for_all:#FFFFFF;
 }

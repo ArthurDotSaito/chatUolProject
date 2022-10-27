@@ -8,6 +8,37 @@
         position: relative;
         overflow: scroll;
         padding-top: 26px;
-        background-color: red;
+        color: var(--chat_background_color);
     }
+
+    .message ul{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width:100%;
+        height: 40px;
+        border-radius: 2px;
+        background-color: var(--chat_background_color);
+    }
+
+    .hour, .from, .toUsers, .text{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.41px;
+        color: var(--from_text_color);
+        margin: 0px 2px 0px 2px;
+    }
+
+    .hour{
+        color:var(--text_hour_color);
+    }
+
+    .from{
+        font-weight: 700;
+    }
+
+    .toUsers span{
+        font-weight: 700;
+    }
+
 }
