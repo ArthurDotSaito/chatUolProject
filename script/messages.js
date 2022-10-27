@@ -1,20 +1,20 @@
 let usersMessages = []
 
-const getMessages = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
-getMessages.then(hasArrived);
-
-function hasArrived(response){
-    // console.log(response);
-    // console.log(response.data);
-
-    usersMessages = response.data;
-    dataMessageRender();
-    backgroundColorForMessage();
-}   
+function getMessagesFromServer(){
+    const getMessages = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
+    getMessages.then(hasArrived);
+    
+    function hasArrived(response){
+        usersMessages = response.data;
+        dataMessageRender();
+        backgroundColorForMessage();
+    }  
+}
 
 function dataMessageRender(){
     const messagesList = document.querySelector('.message');
     messagesList.innerHTML = '';
+    console.log("tic");
     for(let i = 0; i < usersMessages.length; i++){
         let userMessage = usersMessages[i];
 
@@ -42,6 +42,7 @@ function dataMessageRender(){
 function backgroundColorForMessage(){
     let messagesBox = document.getElementsByClassName('messageBox');
     console.log(messagesBox);
+    console.log("toc");
     for(let i = 0; i < usersMessages.length; i++){
         let userMessage = usersMessages[i];
         let messageBox = messagesBox[i];
