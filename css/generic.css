@@ -1,0 +1,10 @@
+*{
+    font-family: 'Roboto' , sans-serif;
+}
+
+:root{
+    --background_login:#FFFFFF;
+    --border_login: #D7D7D7;
+    --text_login:#D7D7D7;
+    --login_button: #696969;
+}

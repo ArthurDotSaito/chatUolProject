@@ -1,0 +1,22 @@
+@media screen and (max-width: 614px) {
+
+    .mainHeader{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;  
+      width: 100%;
+      height: 80px;
+    }
+
+    .logoImage{
+        width: 75px;
+        height: 53px;
+        padding-left: 22px;
+    }
+
+    .peopleIcon, .peopleIcon ion-icon{
+        width: 45px;
+        height: 45px;
+        padding-right: 17px;
+    }
+}

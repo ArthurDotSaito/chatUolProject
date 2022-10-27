@@ -1,0 +1,57 @@
+@media screen and (max-width: 614px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .loginForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginHeader{
+        display: flex;
+        justify-content: center;
+        width: 130px;
+        height: 92px;
+    }
+
+    .loginHeader img{
+        width: 130px;
+        height: 72px;
+    }
+
+    .loginInput{
+        width: 261px;
+        height: 54px;
+        margin-top: 94px;
+        margin-bottom: 15px;
+        background-color: var(--background_login);
+        border: 1px solid var(--border_login);
+        border-radius: 4px;
+    }
+
+    .loginInput::placeholder{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: var(--text_login);
+    }
+
+    .loginButton{
+        width: 109px;
+        height: 45px;
+        border-radius: 9px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: var(--login_button);
+    }
+}
