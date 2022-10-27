@@ -18,7 +18,6 @@
         width:100%;
         height: 40px;
         border-radius: 2px;
-        background-color: var(--chat_background_color);
     }
 
     .hour, .from, .toUsers, .text{
@@ -39,6 +38,18 @@
 
     .toUsers span{
         font-weight: 700;
+    }
+
+    .globalMessage{
+        background-color: var(--message_for_all);
+    }
+
+    .privateMessage{
+        background-color: var(--message_private);
+    }
+
+    .statusMessage{
+        background-color: var(--message_enter_room);
     }
 
 }
