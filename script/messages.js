@@ -1,15 +1,31 @@
-let usersMessages = []
+let usersMessages = [];
+let arrayCopy = [];
 
 function getMessagesFromServer(){
     const getMessages = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
     getMessages.then(hasArrived);
     
     function hasArrived(response){
+        arrayCopy = JSON.stringify(usersMessages);
         usersMessages = response.data;
         dataMessageRender();
-        backgroundColorForMessage();
+        backgroundColorForMessage(); 
+        verifyChangestoScroll();
     }  
 }
+
+function verifyChangestoScroll(){
+    if(arrayCopy !== JSON.stringify(usersMessages)){
+        scrollToLastMessage();
+    }
+}
+
+function scrollToLastMessage(){
+    let newMessage = document.querySelector('.message').lastElementChild;
+    console.log(newMessage);
+    newMessage.scrollIntoView();
+}
+
 
 function dataMessageRender(){
     const messagesList = document.querySelector('.message');
@@ -41,7 +57,6 @@ function dataMessageRender(){
 
 function backgroundColorForMessage(){
     let messagesBox = document.getElementsByClassName('messageBox');
-    console.log(messagesBox);
     console.log("toc");
     for(let i = 0; i < usersMessages.length; i++){
         let userMessage = usersMessages[i];

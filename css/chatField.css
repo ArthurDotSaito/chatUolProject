@@ -4,11 +4,12 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: calc(100% - 160px);
+        height: calc(100% - 360px);
         position: relative;
-        overflow: clip;
+        overflow: scroll;
         padding-top: 106px;
         color: var(--chat_background_color);
+        bottom: 80px;
     }
 
     .message ul{
