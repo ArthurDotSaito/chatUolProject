@@ -4,10 +4,10 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 600px;
+        height: calc(100% - 160px);
         position: relative;
-        overflow: scroll;
-        padding-top: 26px;
+        overflow: clip;
+        padding-top: 106px;
         color: var(--chat_background_color);
     }
 

@@ -4,6 +4,8 @@
 
 :root{
     --background_login:#FFFFFF;
+    --header_background_color:#FFFFFF;
+    --footer_background_color:#ffffff;
     --border_login: #D7D7D7;
     --text_login:#D7D7D7;
     --login_button: #696969;
