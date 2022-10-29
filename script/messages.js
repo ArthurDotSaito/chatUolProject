@@ -26,7 +26,6 @@ function scrollToLastMessage(){
     newMessage.scrollIntoView();
 }
 
-
 function dataMessageRender(){
     const messagesList = document.querySelector('.message');
     messagesList.innerHTML = '';

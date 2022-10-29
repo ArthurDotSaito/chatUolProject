@@ -1,7 +1,7 @@
 const input = document.querySelector('.loginInput');
 const button = document.querySelector('.loginButton');
 const form = document.querySelector('.loginForm');
-
+let userName;
 
 function checkInput({target}){
     if (target.value.length > 2 ){
@@ -20,7 +20,7 @@ const handleSubmit = (event) => {
 }
 
 function checkLogin(){
-    let userName = localStorage.getItem('username');
+    userName = localStorage.getItem('username');
     let newUser = {name: `${userName}`};
     const userNameServerResponse = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', newUser);
     userNameServerResponse.then(mainPage);
@@ -34,8 +34,6 @@ function checkLogin(){
         alert("Nome de usuário já utilizado.")
     }
 }
-
-
 
 input.addEventListener('input', checkInput);
 form.addEventListener('submit', handleSubmit);
