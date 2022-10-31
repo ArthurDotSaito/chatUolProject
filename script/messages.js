@@ -41,7 +41,19 @@ function dataMessageRender(){
                 <li class="text">${userMessage.text}</li>
             </ul>
         `             
-        }else{
+        }else if(userMessage.type == 'private_message'){
+            if(userMessage.to == userName){
+                messagesList.innerHTML +=`
+                <ul class="messageBox">
+                    <li class="hour">(${userMessage.time})</li>
+                    <li class="from">${userMessage.from}</li>
+                    <li class="toUsers">para <span>${userMessage.to}:</span></li>
+                    <li class="text">${userMessage.text}</li>
+                </ul>
+            `
+            }
+        }
+        else{
             messagesList.innerHTML +=`
             <ul class="messageBox">
                 <li class="hour">(${userMessage.time})</li>
